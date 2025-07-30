@@ -6,17 +6,17 @@ const Home = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users")
+      .get("http://localhost:3500/users")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
   const deleteItem = (id) => {
     const boolean = confirm("Do you want to delete that item");
     if (boolean) {
-      axios.delete(`https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users/${id}`);
+      axios.delete(`http://localhost:3500/users/${id}`);
 
       //this
-      //axios.get("https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users").then((res) => setData(res.data));
+      //axios.get("http://localhost:3500/users").then((res) => setData(res.data));
 
       //or
       location.reload()
