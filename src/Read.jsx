@@ -7,7 +7,7 @@ const Read = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users/${id}`)
+      .get(`http://localhost:3500/users/${id}`)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
