@@ -16,10 +16,10 @@ const Home = () => {
       axios.delete(`https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users/${id}`);
 
       //this
-      axios.get("https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users").then((res) => setData(res.data));
+      //axios.get("https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users").then((res) => setData(res.data));
 
       //or
-      //location.reload()
+      location.reload()
     }
   };
   return (
