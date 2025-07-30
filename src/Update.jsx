@@ -20,7 +20,9 @@ const Update = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users/${id}`, variables)
+      .put(`https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users/${id}`, variables,{
+          headers:{"Content-Type":"application/json"}
+        })
       .then((res) => {
         console.log(res);
         navigate("/");
