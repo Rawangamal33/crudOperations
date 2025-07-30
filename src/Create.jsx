@@ -12,7 +12,7 @@ const Create = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://5c5b2317-bf55-465b-8756-a395e63ba331-00-103z44xqtygrs.worf.replit.dev/users", values,{
+      .post("http://localhost:3500/users", values,{
           headers:{"Content-Type":"application/json"}
         })
       .then((res) => {
